@@ -109,6 +109,27 @@ b)  Inspect the film titles manually. Which films form a film series? A
     displays a list of the different series with the titles of the films
     and how many films belong to the series. Output the dataframe.
 
+Cars, Toy Story, Incredibles, Finding Nemo 
+```{r}
+film_series <- pixar_films %>%
+  filter(str_detect(film, "Cars") | 
+         str_detect(film, "Toy Story") | 
+         str_detect(film, "Incredibles") | 
+         str_detect(film, "Finding")| 
+         str_detect(film, "Monsters")) %>% mutate(
+           series = case_when(
+         str_detect(film, "Cars") ~ "Cars" , 
+         str_detect(film, "Toy Story") ~ "Toy Story", 
+         str_detect(film, "Incredibles") ~ "Incredibles", 
+         str_detect(film, "Finding") ~ "Finding", 
+         str_detect(film, "Monsters") ~ "Monsters")
+         )
+film_series <- film_series %>% group_by(series) %>% mutate(count = n()) 
+
+film_series
+```
+
+
 c)  Load the `public_response` dataframe into R. Convert the
     `cinema_score` variable into a factor while ensuring the factor
     levels are defined in ascending order, from the lowest to the
