@@ -188,8 +188,8 @@ energy_prices <- read_csv("data/Energy Prices - BP Statistics (2016).csv")
 
 c)  Put the name / title of the dataset and a link to it below.
 
--   Dataset Name: ...
--   Link: <https://github.com/owid/owid-datasets/>...
+-   Dataset Name: Energy Prices - BP Statistics (2016)
+-   Link: <https://github.com/owid/owid-datasets/tree/master/datasets/Energy%20Prices%20-%20BP%20Statistics%20(2016)#energy-prices---bp-statistics-2016>
 
 d)  Come up with a (research) question you want to answer with the data
     and briefly explain why you believe this is an interesting question
