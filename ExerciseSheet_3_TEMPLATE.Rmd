@@ -202,7 +202,11 @@ e)  Use R to answer your chosen question. Please limit your analysis to
     You are **not expected** to use advanced statistical models or
     external packages which haven't been introduced.
 
-    
+```{r}
+energy_prices <- energy_prices %>% pivot_longer(cols = -c(Entity,Year),names_to = "source", values_to = "price")
+
+energy_prices
+```    
     
 f)  Create a meaningful plot / figure with the dataset. Make sure to
     provide a figure caption (via the chunk options / Rmarkdown) and
