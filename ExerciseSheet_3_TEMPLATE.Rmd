@@ -211,6 +211,22 @@ energy_prices
 f)  Create a meaningful plot / figure with the dataset. Make sure to
     provide a figure caption (via the chunk options / Rmarkdown) and
     correctly label the figure.
+```{r}
+ggplot(
+  energy_prices,
+  aes(
+    x = Year,
+    y = price,
+    colour = source
+  )
+) + geom_line() + labs(
+  title = "How have energy prices changed over time?",
+  x = "Year",
+  y = "Price",
+  color = "Source"
+)
+```
+
 
 ## Final Note
 
