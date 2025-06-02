@@ -139,7 +139,7 @@ c)  Load the `public_response` dataframe into R. Convert the
 public_response <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-03-11/public_response.csv')
 
 public_response$cinema_score <- factor(public_response$cinema_score, levels = c("A-","A","A+"), exclude = NULL, ordered = TRUE)
-public_pixar <- merge(pixar_films, public_response, by = "film")
+public_pixar <- merge(film_series, public_response, by = "film")
 ```
 
 
@@ -157,6 +157,8 @@ d)  Choose one of the variables representing the public response and
 
     What do you notice when comparing the scores of the films in a
     series? Do you see any patterns?
+
+
 
 ## Exercise 4: Open Analysis (4 points)
 
