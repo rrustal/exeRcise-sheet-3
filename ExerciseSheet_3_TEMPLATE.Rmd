@@ -81,12 +81,25 @@ Link:
 <https://github.com/rfordatascience/tidytuesday/tree/main/data/2025/2025-03-11>
 
 For small datasets like these adding them to git is not a problem.
+```{r}
+library(tidyverse)
+```
 
 a)  Load the `pixar_films` dataset into R. Clean the dataset by removing
     films without a title. Inspect the variable `film_rating`. What are
     the possible values and what do they mean? Create a factor variable
     for the film rating. Why is this appropriate?
+```{r}
+pixar_films <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-03-11/pixar_films.csv')
+pixar_films <- pixar_films %>% drop_na(film)
+pixar_films$film_rating <- factor(pixar_films$film_rating, exclude = NULL)
+```
 
+The possible values are G and PG. The rating based on Motion Picture Association (MPA) film rating system. 
+G: General Audiences
+PG: Parental Guidance Suggested
+
+film_rating is a categorical variable,because it has a fixed and known set of possible values, which when we transform can help us analising and vizualising
 <!-- -->
 
 b)  Inspect the film titles manually. Which films form a film series? A
