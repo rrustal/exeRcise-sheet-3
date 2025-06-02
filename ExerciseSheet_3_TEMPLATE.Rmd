@@ -195,12 +195,13 @@ d)  Come up with a (research) question you want to answer with the data
     and briefly explain why you believe this is an interesting question
     within one sentence. It should be a question that can be answered
     with the dataset and using R.
-    
+    How have energy prices changed over time?
     
 e)  Use R to answer your chosen question. Please limit your analysis to
     the functions and techniques we have covered so far in the course.
     You are **not expected** to use advanced statistical models or
     external packages which haven't been introduced.
+
     
     
 f)  Create a meaningful plot / figure with the dataset. Make sure to
