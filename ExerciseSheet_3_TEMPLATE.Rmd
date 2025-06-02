@@ -157,8 +157,19 @@ d)  Choose one of the variables representing the public response and
 
     What do you notice when comparing the scores of the films in a
     series? Do you see any patterns?
+```{r}
+ggplot(public_pixar, aes(x = series, y = critics_choice, fill = film)) +
+  geom_col(position = "dodge") + 
+  scale_x_discrete() +
+  labs(
+    title = "Public Response Scores for Pixar Film Series",
+    x = "Film Series",
+    y = "Critics' Choice Score"
+  ) +
+  theme_minimal() 
+```
 
-
+There are different trends, so for example in Cars and Toy Story the first movie is ranked better by the critics then the following movies, while it is the opposite for Finding Nemo, Incredibles and Monster Inc. 
 
 ## Exercise 4: Open Analysis (4 points)
 
